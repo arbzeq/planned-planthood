@@ -10,7 +10,6 @@
     --planthood-green: rgba(10, 132, 110, 1);
     --planthood-darker-green: rgba(5, 86, 71, 1);
     background-position: center;
-    color: black;
 }
 
 body {
@@ -19,6 +18,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #FCF6FC;
+    color: black;
 }
 
 .content-container {
@@ -284,11 +284,40 @@ footer {
     margin-top: 3rem;
     .top-of-footer {
         background-image: url(https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-        height: 590px;
-        width: 100%;
-        
-    }
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: white;
 
+        .left-footer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.79);
+            
+
+            .title-of-left-footer { 
+                h1 {
+                    font-size: 64px;
+                    font-weight: 500;
+                }
+            }
+
+            .bottom-of-left-footer {
+                font-size: 20px;
+                font-weight: 400;
+                display: flex;
+                justify-content: space-between;
+                align-items: space-between;
+            }
+        }
+
+        .right-footer {
+            text-align: center;
+        }
+    }
     .bottom-of-footer {
         h5 {
             padding: 1rem 0;
