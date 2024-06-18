@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     --planthood-green: rgba(10, 132, 110, 1);
+    --planthood-darker-green: rgba(5, 86, 71, 1);
+    background-position: center;
 }
 
 body {
@@ -16,7 +20,7 @@ body {
 }
 
 .content-container {
-    width: 70%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -65,21 +69,13 @@ figure {
     justify-content: space-around;
     align-items: center;
     height: 60px;
-    color: rgba(5, 86, 71, 1);
     box-shadow: 0px 4px 4px 0px rgba(3, 56, 47, 0.11);
 
     a {
+        color: var(--planthood-darker-green);
         font-size: 20px;
-    }
-    
-}
-
-a, h1 {
-    
-    font-family: "Maven Pro", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+        font-weight: 500;
+    } 
 }
 
 .title {
@@ -87,13 +83,23 @@ a, h1 {
     text-align: center;
     color: var(--planthood-green);
     padding: 4vh;
-
+    h1 {
+        font-weight: 500;
+        font-size: 48px;
+    } 
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
 .article-1 {
     display: flex;
-    padding: 2rem;
-    gap: 2rem;
+    justify-content: space-between;
+    
+    gap: 4rem;
     figure {
         background-color: var(--planthood-green);
         border-radius: 50%;
@@ -106,10 +112,12 @@ a, h1 {
         font-size: 32px;
         font-weight: 700;
         
+        
     }
     p {
         color: rgba(0, 0, 0, 1);
         font-size: 16px;
+        font-weight: 400;
     }
 
     aside {
@@ -119,15 +127,132 @@ a, h1 {
         justify-content: center;
         gap: 1rem;
     }
+
+    button {
+        
+        font-weight: 700;
+    }
 }
 
 hr.line-1 {
     width: 30%;
     align-self: center;
     border-width: 3px;
-    border-color: rgba(5, 86, 71, 1);
+    border-color: var(--planthood-darker-green);
     margin: 3rem 0;
 }
 
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;  
+}
+
+.maven-pro {
+    font-family: "Maven Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.lato {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+.planned-plantations-container {
+    color: rgb(0, 0, 0);
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.planned-plantations-articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1rem;
+    
+
+    .planned-article {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        figure {
+            height: 296px;
+        }
+        .article-description {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1rem;
+            
+            gap: 2rem;
+
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                text-align: left;
+            }
+
+            h6 {
+                font-size: 16px;
+                font-weight: 700;
+                text-align: right;
+            }
+
+            p {
+                text-align: left;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            button {
+                text-align: center;
+                background-color: rgba(185, 56, 87, 1);
+                font-size: 15px;
+                font-weight: 700;
+                border: none;
+                border-radius: 2rem;
+                color: white;
+                padding: 0.5rem 0rem;
+            }
+
+        }
+
+        #planned-article-1 {
+            background-image: url("https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        #planned-article-2 {
+            background-image: url("https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        #planned-article-3 {
+            background-image: url("https://images.unsplash.com/photo-1565698228480-eec300c9679b?q=80&w=2806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        #planned-article-4 {
+            background-image: url("https://images.unsplash.com/photo-1687878269804-63e8b50e3ddc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        #planned-article-5 {
+            background-image: url("https://images.unsplash.com/photo-1555447740-03e40562af94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        #planned-article-6 {
+            background-image: url("https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+    }
+    
+}
+
+.button-layout {
+    background-color: var(--planthood-green);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 24px;
+    border-radius: 1rem;
+    border: none;
+}
 
 
