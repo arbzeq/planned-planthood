@@ -10,7 +10,7 @@
     <div class="content-container-with-menu">
         
         <div class="content-container">
-            <img id="menu-icon" src="./assets/menu-icon.svg" alt="Meny ikon.">
+            
             
             <header class="figures">
                 <figure class="header-image-1">
@@ -179,6 +179,8 @@
             </footer>
         </div>
         
+        <img id="menu-icon" src="./assets/menu-icon.svg" alt="Meny ikon.">
+        
         <nav class="nav-bar-mobile maven-pro">
             <a>PLANER</a>
             <a>HISTORIK</a>
@@ -190,7 +192,7 @@
 
     <script>
         document.querySelector("#menu-icon").addEventListener("click", (e) => {
-            document.querySelector(".nav-bar").classList.toggle("open");
+            document.querySelector(".nav-bar-mobile").classList.toggle("open");
         });
         
     </script>
